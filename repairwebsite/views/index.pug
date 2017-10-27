@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Hello to #{name}
+  .jumbotron
+    .container
+      .row
+        .col-md-7
+          h1 Computer Not Working?
+          p
+            | Lorum Ipsom
+          p 
+            a.btn.btn-primary.btn-lg(href='#') Read More
+        .col-md-5
+          img.img-thumbnail(src='images/SurfaceMousePdp_1_HeroPDPPanel_1_V2.jpg')
+  .row
+    .col-md-4
+      .well
+        h4 Hardware Problems
+        p lorem ipsom
+    .col-md-4
+      .well
+        h4 Software Problems
+        p lorem ipsom
+    .col-md-4
+      .well
+        h4 Other Problems
+        p lorem ipsom
+
