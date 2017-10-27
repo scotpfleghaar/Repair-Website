@@ -1,7 +1,31 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type="text/javascript", src="../bower_components/jquery/dist/jquery.min.js")
+		script(type="text/javascript", src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+		link(rel="stylesheet", type="text/css", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+	body
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") Repair
+				#navbar.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li(class=title=='Home' ? 'active' : undefined)
+							a(href="/") Home
+						li(class=title=='About' ? 'active' : undefined)
+							a(href="/about") About
+						li(class=title=='Services' ? 'active' : undefined)
+							a(href="/services") Services
+						li(class=title=='Contact' ? 'active' : undefined)
+							a(href="/contact") Contact
+						
+
+		block content
